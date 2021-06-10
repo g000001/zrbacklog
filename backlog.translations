@@ -1,0 +1,9 @@
+;; -*- mode: lisp; -*-
+(cl:in-package cl-user)
+
+#+linux
+(setf (logical-pathname-translations "backlog")
+      `(("**;*.*.*" "/l/src/rw/cl-backlog/**/*.*")))
+#+mac
+(setf (logical-pathname-translations "backlog")
+      `(("**;*.*.*" "/usr/local/l/src/rw/cl-backlog/**/*.*")))
